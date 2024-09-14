@@ -19,6 +19,9 @@ app.get("/", (req, res) => {
 });
 
 app.use("/admin", require("./routes/admin.route"));
+app.use("/sheet", require("./routes/sheet.route"));
+app.use("/lottery", require("./routes/lottery.route"));
+app.use("/search", require("./routes/search.route"));
 
 connectToDatabase()
   .then(() => {
