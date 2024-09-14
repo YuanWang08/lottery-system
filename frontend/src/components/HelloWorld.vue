@@ -6,16 +6,18 @@ defineProps<{
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+    <h1 class="redTheme">{{ msg }}</h1>
     <h3>
-      You’ve successfully created a project with
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>. What's next?
+      期初社大抽獎系統
     </h3>
   </div>
 </template>
 
 <style scoped>
+.redTheme {
+  color: #FF2D2D;
+}
+
 h1 {
   font-weight: 500;
   font-size: 2.6rem;

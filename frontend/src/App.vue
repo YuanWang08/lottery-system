@@ -6,19 +6,20 @@ import HelloWorld from "./components/HelloWorld.vue";
 <template>
   <header>
     <img
-      alt="Vue logo"
+      alt="ncu_srs"
       class="logo"
-      src="@/assets/logo.svg"
+      src="@/assets/images/main.png"
       width="125"
       height="125"
     />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <HelloWorld msg="證券研究社" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/">抽獎表單</RouterLink>
+        <RouterLink to="/search">序號查詢</RouterLink>
+        <RouterLink to="/admin">Admin</RouterLink>
       </nav>
     </div>
   </header>
@@ -45,7 +46,7 @@ nav {
 }
 
 nav a.router-link-exact-active {
-  color: var(--color-text);
+  color: #FF2D2D;
 }
 
 nav a.router-link-exact-active:hover {
@@ -55,7 +56,7 @@ nav a.router-link-exact-active:hover {
 nav a {
   display: inline-block;
   padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+  border-left: 1px solid;
 }
 
 nav a:first-of-type {
