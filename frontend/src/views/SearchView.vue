@@ -61,7 +61,7 @@ const searchLotteries = async () => {
 
   try {
     const response = await fetch('http://localhost:3000/search', {
-      method: 'GET',
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },

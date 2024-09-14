@@ -10,10 +10,16 @@ defineProps<{
     <h3>
       期初社大抽獎系統
     </h3>
+    <p class="content">規則：填寫表單就會有一張抽獎券，若有追縱證券研究社的FB、IG與加入DC都可再獲得一張抽獎券，每個學號只能填寫一次</p>
   </div>
 </template>
 
 <style scoped>
+.content {
+  text-align: start;
+  margin-top: 1rem;
+}
+
 .redTheme {
   color: #FF2D2D;
 }
