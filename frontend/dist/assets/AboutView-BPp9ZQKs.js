@@ -1,0 +1,1 @@
+import{_ as o,o as s,a as t,b as a}from"./index-Cq_WT0L-.js";const n={},r={class:"about"};function c(_,e){return s(),t("div",r,e[0]||(e[0]=[a("h1",null,"This is an about page",-1)]))}const l=o(n,[["render",c]]);export{l as default};
