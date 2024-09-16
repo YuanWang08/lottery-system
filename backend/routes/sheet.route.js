@@ -5,6 +5,14 @@ const router = express.Router();
 // 提交抽獎表單
 router.route("/").post(async (req, res) => {
   const UnitModel = require("../models/unit");
+
+  // 檢查是否有重複的學號
+  const student_number = req.body.student_number;
+  const unitExist = await UnitModel.findOne({ student_number: student_number });
+  if (unitExist) {
+    return res.status(400).json({ message: "Student number already exists" });
+  }
+
   const unit = new UnitModel({
     student_number: req.body.student_number,
     department: req.body.department,

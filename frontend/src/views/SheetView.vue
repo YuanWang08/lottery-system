@@ -19,10 +19,10 @@
         <div v-for="social in socialFields" :key="social.name" class="form-group">
           <div class="checkbox-group">
             <input v-model="formData[social.isName]" type="checkbox" :id="social.isName" :name="social.isName">
-            <label :for="social.isName">是否有{{ social.label }}</label>
+            <label :for="social.isName">是否有追蹤證研{{ social.label }}</label>
           </div>
           <div v-if="formData[social.isName]" class="social-id-input">
-            <label :for="social.idName">{{ social.label }} ID</label>
+            <label :for="social.idName">你的{{ social.label }} ID</label>
             <input v-model="formData[social.idName]" type="text" :id="social.idName" :name="social.idName">
           </div>
         </div>
@@ -117,6 +117,10 @@ const submitForm = async () => {
       },
       body: JSON.stringify(formData),
     });
+    if (response.status === 400) {
+      alert("該學號已註冊過。");
+      return;
+    }
     const data = await response.json();
     console.log("Form submitted successfully:", data);
     submissionResult.value = data;
