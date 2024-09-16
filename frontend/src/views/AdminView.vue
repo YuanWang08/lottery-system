@@ -78,7 +78,7 @@ const validatePassword = () => {
 
 const login = async () => {
   try {
-    const response = await fetch('http://localhost:3000/admin', {
+    const response = await fetch('https://lottery-system.onrender.com/admin', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -104,7 +104,7 @@ const login = async () => {
 
 const fetchLotteries = async () => {
   try {
-    const response = await fetch('http://localhost:3000/lottery', {
+    const response = await fetch('https://lottery-system.onrender.com/lottery', {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${token.value}`,

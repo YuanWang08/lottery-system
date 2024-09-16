@@ -60,7 +60,7 @@ const searchLotteries = async () => {
   if (!isValid.value) return;
 
   try {
-    const response = await fetch('http://localhost:3000/search', {
+    const response = await fetch('https://lottery-system.onrender.com/search', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

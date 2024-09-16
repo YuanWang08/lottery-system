@@ -110,7 +110,7 @@ const validateAndSubmit = async () => {
 
 const submitForm = async () => {
   try {
-    const response = await fetch("http://localhost:3000/sheet", {
+    const response = await fetch("https://lottery-system.onrender.com/sheet", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
